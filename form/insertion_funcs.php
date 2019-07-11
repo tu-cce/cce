@@ -13,7 +13,7 @@
                             (title, abstract, url)
                     VALUES  ('$title', '$abstract', '$url');";
 
-        $connection ->query($sql_art);
+        $connection -> query($sql_art);
     }
 
 
@@ -34,7 +34,6 @@
             $row_count = mysqli_num_rows($query_matches);
     
             if($row_count == 0){
-                echo $word . " I AM IN <br>";
             
                 $sql_keyword = "INSERT INTO keywords 
                                     (word)

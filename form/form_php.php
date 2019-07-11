@@ -18,6 +18,6 @@
     }
 
     // Inserting into Keywords table 
-    if(empty($keywords)){
+    if(!empty($keywords) and $keywords[0] != ""){
         keywords_insert($keywords, $conn); 
     }
