@@ -22,9 +22,9 @@
     $results = mysqli_query($conn, $sql_names); // $conn is imported from the /includes/ folder
     
     // Getting the count of the rows, given by the result of the Query
-    $resultCheck = mysqli_num_rows($results);
+    $result_check = mysqli_num_rows($results);
 
-    if($resultCheck > 0){
+    if($result_check > 0){
         while($row = mysqli_fetch_assoc($results)){
             // Here $row becomes an associative array
             echo '<strong>Author</strong>: ' . $row['f_name'] . " " . $row['l_name'] . "<br>" . '<strong>Title</strong>: ' . $row['title'] . "<br>" . '<strong>Abstract</strong>: ' . $row['abstract'] ."<br><br>";
