@@ -1,5 +1,6 @@
 <?php
     include_once 'D:\tu-cce\includes\dbh.inc.php';
+    include_once 'insertion_funcs.php';
 
     // Taking the variables from the Form
     $first = $_POST["first"];
@@ -12,29 +13,11 @@
 
 
     // Inserting to Articles table
-    $sql_art = "INSERT INTO articles 
-                        (title, abstract, url)
-                VALUES  ('$title', '$abstract', '$url');";
-
-    $conn -> query($sql_art);
-
+    if($title and $abstract and $url and $conn){ 
+        articles_insert($title, $abstract, $url, $conn);
+    }
 
     // Inserting into Keywords table 
-    foreach($keywords as $word ){
-        $word_search = "SELECT word FROM keywords
-                        WHERE word = '$word';";
-
-        $query_matches = mysqli_query($conn, $word_search);
-
-        $row_count = mysqli_num_rows($query_matches);
-
-        if($row_count == 0){
-            echo $word . " I AM IN <br>";
-        
-            $sql_keyword = "INSERT INTO keywords 
-                                (word)
-                       VALUES   ('$word');";
-
-            $conn -> query($sql_keyword);
-        }
+    if(empty($keywords)){
+        keywords_insert($keywords, $conn); 
     }
