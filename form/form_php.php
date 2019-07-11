@@ -11,26 +11,30 @@
     $edition = explode("/", trim(preg_replace('/\s+/', '', $_POST['edition'])));
 
 
+    // Inserting to Articles table
     $sql_art = "INSERT INTO articles 
                         (title, abstract, url)
                 VALUES  ('$title', '$abstract', '$url');";
 
     $conn -> query($sql_art);
-    
+
+
+    // Inserting into Keywords table 
     foreach($keywords as $word ){
-        $if_stmnt = "SELECT word FROM keywords
-                     WHERE word IS LIKE $word; ";
+        $word_search = "SELECT word FROM keywords
+                        WHERE word = '$word';";
 
-        if(!$if_stmnt){
-            $results = mysqli_query($conn, $if_stmnt);
+        $query_matches = mysqli_query($conn, $word_search);
 
-            $row = mysqli_fetch_assoc($results);
+        $row_count = mysqli_num_rows($query_matches);
+
+        if($row_count == 0){
+            echo $word . " I AM IN <br>";
         
-            $fetched_word = $row["word"];
-            $sql_kw = "INSERT INTO keywords 
+            $sql_keyword = "INSERT INTO keywords 
                                 (word)
-                       VALUES   ($fetched_word);";
+                       VALUES   ('$word');";
 
-            $conn -> query($sql_kw);
+            $conn -> query($sql_keyword);
         }
     }
