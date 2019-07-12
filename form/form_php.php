@@ -4,16 +4,14 @@
 
 
     // Taking the variables from the Form in index.php
-    $first = $_POST["first"];
-    $last = $_POST["last"];
+    $authors = explode(",", $_POST['authors']);
     $keywords =  explode(",", trim(preg_replace('/\s+/', '', $_POST['keywords'])));
     $title = $_POST["title"];
     $abstract = $_POST["abstract"];
-    $url = $_POST["url"];
+    $number = $_POST["number"];
     $edition = explode("/", trim(preg_replace('/\s+/', '', $_POST['edition'])));
 
-
-    // If you don't insert and article you cant insert keywords
+    // If you don't insert an article you cant insert keywords
     // Inserting to Articles table
     if($title and $abstract and $url and $conn){ 
         articles_insert($title, $abstract, $url, $conn);
@@ -26,5 +24,7 @@
             articles_keywords_insert("article", "keyword", $keywords, $conn);
         }
     }
+
+    authors_insert($authors, $conn);
 
 
