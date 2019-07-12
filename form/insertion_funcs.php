@@ -44,9 +44,11 @@
         }
     }
 
+
     function get_last_id($table_name, $connection){
-        $last_article_query = "SELECT id FROM". " $table_name ".
-                               "ORDER BY id DESC
+
+        $last_article_query = "SELECT id FROM " . $table_name . "s " .
+                              "ORDER BY id DESC
                                LIMIT 1;";
 
         $query_matches = mysqli_query($connection, $last_article_query);
@@ -57,22 +59,62 @@
     }
 
 
-    function articles_keywords_insert($keywords_len, $connection){
+    function many_to_many_insert($first_table, $second_table, $first_id, $second_id, $connection){
+
+        $query = "INSERT INTO " . $first_table . "_" . $second_table . "s " .
+                        "(".$first_table . "_id". ", " . $second_table . "_id ".")".
+                        "VALUES ('$first_id', '$second_id');";
+
+        echo $query;
+        $connection -> query($query);
+    }
+
+
+    function articles_keywords_insert($first_table, $second_table, $keywords, $connection){
         
         // Getting the id of the last article
-        $last_article_id = get_last_id('articles', $connection);
+        $first_id = get_last_id($first_table, $connection);
 
-        // Getting the id of the last keyword
-        $last_keyword_id = get_last_id('keywords', $connection);
 
-        while($keywords_len > 0){
-            $query = "INSERT INTO article_keywords
-                             (article_id, keyword_id)
-                      VALUES ('$last_article_id', '$last_keyword_id');";
-            $connection -> query($query);
+        $existing_ids = [];
 
-            $last_keyword_id--;
-            $keywords_len--;
+        // Adding all keywords' ids that are already in our table, to the $existing_ids
+        foreach($keywords as $word){
+            $keyword_available = "SELECT id, word FROM $second_table"."s ".
+                                 "WHERE word = '$word';";
+
+            $curr_match = mysqli_query($connection, $keyword_available);
+            $curr_row = mysqli_fetch_assoc($curr_match);
+            
+            // Add id to the array of already used ids
+            if($curr_match){
+                $existing_ids[] = $curr_row["id"];
+            }
+        }
+
+        // If none of those keywords exists in our table $new_kws_count is not defined
+        if(!empty($existing_ids)){
+            $new_kws_count = sizeof($keywords) - sizeof($existing_ids);
+            echo $new_kws_count;
+        }
+
+        // Getting the id of the last keyword in the keywords table
+        $second_id = get_last_id($second_table, $connection);
+
+        // Inserting all new keywords to the Many-To-Many table
+        while($new_kws_count > 0){
+            many_to_many_insert($first_table, $second_table, $first_id, $second_id, $connection);
+            $second_id--;
+            $new_kws_count--;
+        }
+
+        $existing_kws_count = sizeof($existing_ids) - 1;
+
+        // Inserting all already existing keywords to the Many-To-Many table
+        while($existing_kws_count >= 0){
+            many_to_many_insert($first_table, $second_table, $first_id, $existing_ids[$existing_kws_count], $connection);
+            
+            $existing_kws_count--;
         }
 
     }

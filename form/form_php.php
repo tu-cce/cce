@@ -23,7 +23,7 @@
             keywords_insert($keywords, $conn);
             
             // Inserting into the connecting Many-To-Many table
-            articles_keywords_insert(sizeof($keywords), $conn);
+            articles_keywords_insert("article", "keyword", $keywords, $conn);
         }
     }
 

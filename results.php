@@ -14,9 +14,9 @@
     
 
     $sql_names =    "SELECT authors.f_name, authors.l_name, articles.title, articles.abstract FROM article_authors
-                    JOIN articles ON articles.id = article_authors.article_id
-                    JOIN authors ON authors.id = article_authors.author_id
-                    WHERE LOWER(authors.f_name) = '$first' OR LOWER(authors.l_name) = '$last';";
+                     JOIN articles ON articles.id = article_authors.article_id
+                     JOIN authors ON authors.id = article_authors.author_id
+                     WHERE LOWER(authors.f_name) = '$first' OR LOWER(authors.l_name) = '$last';";
     
     // Sending the Query to the DB
     $results = mysqli_query($conn, $sql_names); // $conn is imported from the /includes/ folder
