@@ -46,6 +46,11 @@
 
 
     function get_last_id($table_name, $connection){
+    /**
+      * Gets the last id of a table, based on $table_name
+      *
+      * @param string  $table_name
+    */    
 
         $last_article_query = "SELECT id FROM " . $table_name . "s " .
                               "ORDER BY id DESC
@@ -60,6 +65,14 @@
 
 
     function many_to_many_insert($first_table, $second_table, $first_id, $second_id, $connection){
+    /**
+      * Inserts ids of two tables into a Many-To-Many table
+      *
+      * @param string $first_table  The name of the first table
+      * @param string $second_table The name of the second table
+      * @param string $first_id     The id that belongs to the first table
+      * @param string $second_id    The id that belongs to the second table
+    */    
 
         $query = "INSERT INTO " . $first_table . "_" . $second_table . "s " .
                         "(".$first_table . "_id". ", " . $second_table . "_id ".")".
@@ -101,6 +114,7 @@
         // Getting the id of the last keyword in the keywords table
         $second_id = get_last_id($second_table, $connection);
 
+        
         // Inserting all new keywords to the Many-To-Many table
         while($new_kws_count > 0){
             many_to_many_insert($first_table, $second_table, $first_id, $second_id, $connection);
