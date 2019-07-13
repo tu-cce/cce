@@ -2,6 +2,7 @@
 
     include_once 'D:\tu-cce\includes\dbh.inc.php';
 
+
     function articles_insert($title, $abstract, $number, $connection){
     /**
       * Inserts title, abstract and number of an article to the database
@@ -12,7 +13,7 @@
     */
 
         $sql_art = "INSERT INTO articles 
-                            (title, abstract, number)
+                            (title, abstract, num)
                     VALUES  ('$title', '$abstract', '$number');";
 
         $connection -> query($sql_art);
@@ -80,7 +81,7 @@
                         "(".$first_table . "_id". ", " . $second_table . "_id ".")".
                         "VALUES ('$first_id', '$second_id');";
 
-        echo $query;
+        echo $query . "<br>";
         $connection -> query($query);
     }
 
@@ -142,6 +143,17 @@
 
     }
 
+    function validate_author_name($author){
+
+        $author = explode(" ", trim($author));
+        if(sizeof($author) < 2){ 
+            echo "The way you entered the authors is wrong!<br>The right way is [George Peterson,Peter Jameson,...etc]<br>";
+            return null;
+        }
+
+        return $author;
+    }
+
 
     function authors_insert($authors, $connection){
     /**
@@ -150,20 +162,19 @@
       * @param array $authors  Array with the names of all authors for a certain article
     */  
 
+        $existing_ids = [];
+        
         foreach($authors as $author){
 
-            $author = explode(" ", trim($author));
-            if(sizeof($author) < 2){ 
-                echo "The way you entered the authors is wrong!<br>The right way is [George Peterson,Peter Jameson,...etc]";
-                return null;
-            }
+            $author = validate_author_name($author);
+            if($author == null){ return null; }
 
-            $first_name = preg_replace('/\s+/', '', $author[0]);
-            $last_name = preg_replace('/\s+/', '', $author[1]);
+            $first_name = ucfirst(strtolower(preg_replace('/\s+/', '', $author[0])));
+            $last_name = ucfirst(strtolower(preg_replace('/\s+/', '', $author[1])));
             
-            $collision_query = "SELECT f_name, l_name FROM authors
-                                WHERE f_name = '$first_name' AND 
-                                      l_name = '$last_name';";
+            $collision_query = "SELECT id, f_name, l_name FROM authors
+                                 WHERE f_name = '$first_name' AND 
+                                       l_name = '$last_name';";
             
             $query_matches = mysqli_query($connection, $collision_query);
 
@@ -176,7 +187,41 @@
                 
                 $connection -> query($insert_query);
             }else{
-                echo "This author already exists in our database.";
+                $existing_ids[] = mysqli_fetch_assoc($query_matches)["id"];
+                echo "$first_name $last_name already exists in our database.<br>";
             }
         }
+
+        return $existing_ids;
+    }
+
+
+    function articles_authors_insert($articles_table, $authors_table, $authors, $existing_ids, $connection){
+        
+        // Get the last id of articles table
+        $last_article_id = get_last_id($articles_table, $connection);
+
+        if(!empty($existing_ids)){
+            $new_authors_count = sizeof($authors) - sizeof($existing_ids);
+        }else{ 
+            $new_authors_count = sizeof($authors); 
+        }
+
+        $last_author_id = get_last_id($authors_table, $connection);
+
+        while($new_authors_count > 0){
+            many_to_many_insert($articles_table, $authors_table, $last_article_id, $last_author_id, $connection);
+            $last_author_id--;
+            $new_authors_count--;
+        }
+
+        $existing_authors_count = sizeof($existing_ids) - 1;
+
+        // Inserting all already existing keywords to the Many-To-Many table
+        while($existing_authors_count >= 0){
+            many_to_many_insert($articles_table, $authors_table, $last_article_id, $existing_ids[$existing_authors_count], $connection);
+            
+            $existing_authors_count--;
+        }
+        
     }

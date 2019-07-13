@@ -13,8 +13,9 @@
 
     // If you don't insert an article you cant insert keywords
     // Inserting to Articles table
-    if($title and $abstract and $url and $conn){ 
-        articles_insert($title, $abstract, $url, $conn);
+    if($title and $abstract and $number and $conn){
+
+        articles_insert($title, $abstract, $number, $conn);
 
         // Inserting into Keywords table 
         if(!empty($keywords) and $keywords[0] != ""){
@@ -23,8 +24,8 @@
             // Inserting into the connecting Many-To-Many table
             articles_keywords_insert("article", "keyword", $keywords, $conn);
         }
+
+        $existing_ids = authors_insert($authors, $conn);
+
+        articles_authors_insert("article", "author", $authors, $existing_ids, $conn);
     }
-
-    authors_insert($authors, $conn);
-
-
