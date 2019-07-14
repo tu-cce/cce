@@ -18,6 +18,6 @@
         <input type="text" id="edition" name="edition" placeholder="Edition[e.g. 1/2013]"><br>
         <button id="button" type="submit" name="submit">Make an Entry</button>
     </form>
-    
+    articles
 </body>
 </html>

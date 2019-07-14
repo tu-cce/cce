@@ -4,10 +4,14 @@
 
 <?php
 
+//$connect = mysqli_connect(DB_SERVER , DB_USER, DB_PASSWORD, DB_DATABASE);
+
+
     $dbServerName = "localhost";
     $dbUsername = "root";
-    $dbPassword = "root";
-    $dbName = "cce_mag";
+    // TODO insert your connection data:
+    $dbPassword = "";
+    $dbName = "cce_mag2";
 
     $conn = mysqli_connect($dbServerName , $dbUsername, $dbPassword, $dbName);
 

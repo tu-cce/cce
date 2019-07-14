@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7e139037-4f2d-4218-968a-ffa92a98c0fd" name="Default Changelist" comment="" />
+    <list default="true" id="7e139037-4f2d-4218-968a-ffa92a98c0fd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/form/form.php" beforeDir="false" afterPath="$PROJECT_DIR$/form/form.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/form/form_php.php" beforeDir="false" afterPath="$PROJECT_DIR$/form/form_php.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/dbh.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/dbh.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results.php" beforeDir="false" afterPath="$PROJECT_DIR$/results.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,23 +22,196 @@
       <executable />
     </execution>
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - cce_mag@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - cce_mag@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - cce_mag@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="cce_mag2: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - cce_mag@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="cce_mag2: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="article_authors: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index.php">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/results.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+            <state relative-caret-position="799">
+              <caret line="47" column="52" lean-forward="true" selection-start-line="47" selection-start-column="52" selection-end-line="47" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$APPLICATION_PLUGINS_DIR$/php/lib/php.jar!/stubs/standard/standard_1.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="979" column="9" selection-start-line="979" selection-start-column="9" selection-end-line="979" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$APPLICATION_PLUGINS_DIR$/php/lib/php.jar!/stubs/pcre/pcre.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="234" column="9" selection-start-line="234" selection-start-column="9" selection-end-line="234" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="uml://DATABASE/942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.SCHEMA:cce_mag2">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>DATABASE</ID>
+              <OriginalElement>942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.SCHEMA:cce_mag2</OriginalElement>
+              <nodes>
+                <node x="187.75" y="0.0">942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.articles</node>
+                <node x="28.75" y="177.0">942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.article_keywords</node>
+                <node x="361.25" y="11.0">942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.authors</node>
+                <node x="0.0" y="22.0">942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.keywords</node>
+                <node x="189.75" y="166.0">942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.editions</node>
+                <node x="327.75" y="177.0">942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.article_authors</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.article_authors" target="942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.articles">
+                  <point x="-33.5" y="-47.0" />
+                  <point x="361.25" y="141.0" />
+                  <point x="289.41666666666663" y="141.0" />
+                  <point x="40.66666666666663" y="58.0" />
+                </edge>
+                <edge source="942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.article_keywords" target="942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.keywords">
+                  <point x="-35.25" y="-47.0" />
+                  <point x="0.0" y="36.0" />
+                </edge>
+                <edge source="942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.article_keywords" target="942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.articles">
+                  <point x="35.25" y="-47.0" />
+                  <point x="134.5" y="141.0" />
+                  <point x="208.08333333333334" y="141.0" />
+                  <point x="-40.66666666666666" y="58.0" />
+                </edge>
+                <edge source="942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.article_authors" target="942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.authors">
+                  <point x="33.5" y="-47.0" />
+                  <point x="0.0" y="47.0" />
+                </edge>
+                <edge source="942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.editions" target="942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.articles">
+                  <point x="0.0" y="-58.0" />
+                  <point x="0.0" y="58.0" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="0.9284332688588007" x="248.5" y="141.0" />
+              <SelectedNodes>
+                <node>942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.article_authors</node>
+              </SelectedNodes>
+              <Categories>
+                <Category>Key columns</Category>
+                <Category>Columns</Category>
+              </Categories>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/form/form.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/form/insertion_funcs.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-848" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/includes/dbh.inc.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/dataSources.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/dataSources.local.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/form/form_php.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <replaceStrings>
+      <replace>art</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/form/form_php.php" />
+        <option value="$PROJECT_DIR$/form/form.php" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/942f3b74-cb18-444a-9ad2-3d3b0fe4c06c/console.sql" />
+        <option value="$PROJECT_DIR$/results.php" />
+        <option value="$PROJECT_DIR$/includes/dbh.inc.php" />
       </list>
     </option>
   </component>
@@ -44,25 +226,46 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="tu-cce" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tu-cce" type="462c0819:PsiDirectoryNode" />
+              <item name="CCE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CCE" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CCE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CCE" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CCE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CCE" type="462c0819:PsiDirectoryNode" />
+              <item name="form" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CCE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CCE" type="462c0819:PsiDirectoryNode" />
+              <item name="includes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/bla" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="database.main" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -80,11 +283,6 @@
     <configuration name="index.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/index.php">
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="PHP Script.index.php" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -97,46 +295,219 @@
       <option name="presentableId" value="Default" />
       <updated>1562688036110</updated>
       <workItem from="1562688037310" duration="1041000" />
+      <workItem from="1562912888066" duration="46000" />
+      <workItem from="1562912967375" duration="7610000" />
+      <workItem from="1563075265522" duration="3498000" />
+      <workItem from="1563118148450" duration="377000" />
+      <workItem from="1563124045443" duration="9420000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1041000" />
+    <option name="totallyTimeSpent" value="21992000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24962178" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1860817" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3289689" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" weight="0.3289689" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3289689" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.3289689" />
+      <window_info anchor="bottom" id="Database Console" order="12" weight="0.81178397" />
+      <window_info anchor="bottom" id="Messages" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32980332" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Maven" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand>
+      <path>
+        <item name="CCE" type="b2602c69:ProjectViewProjectNode" />
+        <item name="CCE" type="462c0819:PsiDirectoryNode" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+        <state relative-caret-position="629">
+          <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/942f3b74-cb18-444a-9ad2-3d3b0fe4c06c/console_1.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/master.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/tu-cce.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/queries.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/942f3b74-cb18-444a-9ad2-3d3b0fe4c06c/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.SCHEMA:cce_mag2">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.SCHEMA:cce_mag2</OriginalElement>
+          <nodes>
+            <node x="187.75" y="0.0">942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.articles</node>
+            <node x="28.75" y="177.0">942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.article_keywords</node>
+            <node x="361.25" y="11.0">942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.authors</node>
+            <node x="0.0" y="22.0">942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.keywords</node>
+            <node x="189.75" y="166.0">942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.editions</node>
+            <node x="327.75" y="177.0">942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.article_authors</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.article_authors" target="942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.articles">
+              <point x="-33.5" y="-47.0" />
+              <point x="361.25" y="141.0" />
+              <point x="289.41666666666663" y="141.0" />
+              <point x="40.66666666666663" y="58.0" />
+            </edge>
+            <edge source="942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.article_keywords" target="942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.keywords">
+              <point x="-35.25" y="-47.0" />
+              <point x="0.0" y="36.0" />
+            </edge>
+            <edge source="942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.article_keywords" target="942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.articles">
+              <point x="35.25" y="-47.0" />
+              <point x="134.5" y="141.0" />
+              <point x="208.08333333333334" y="141.0" />
+              <point x="-40.66666666666666" y="58.0" />
+            </edge>
+            <edge source="942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.article_authors" target="942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.authors">
+              <point x="33.5" y="-47.0" />
+              <point x="0.0" y="47.0" />
+            </edge>
+            <edge source="942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.editions" target="942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.articles">
+              <point x="0.0" y="-58.0" />
+              <point x="0.0" y="58.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.9284332688588007" x="248.5" y="141.0" />
+          <SelectedNodes>
+            <node>942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.article_authors</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_PLUGINS_DIR$/php/lib/php.jar!/stubs/pcre/pcre.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="234" column="9" selection-start-line="234" selection-start-column="9" selection-end-line="234" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_PLUGINS_DIR$/php/lib/php.jar!/stubs/standard/standard_1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="979" column="9" selection-start-line="979" selection-start-column="9" selection-end-line="979" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/dataSources.local.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/dataSources.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/form/form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/form/form_php.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/form/insertion_funcs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-848" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="47" column="52" lean-forward="true" selection-start-line="47" selection-start-column="52" selection-end-line="47" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/dbh.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArquillianSettingsConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
