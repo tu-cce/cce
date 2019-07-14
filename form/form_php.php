@@ -1,19 +1,23 @@
 <?php
     include_once 'D:\tu-cce\includes\dbh.inc.php';
     include_once 'insertion_funcs.php';
+    include_once 'validations.php';
 
 
     // Taking the variables from the Form in index.php
-    $authors = explode(",", $_POST['authors']);
-    $keywords =  explode(",", trim(preg_replace('/\s+/', '', $_POST['keywords'])));
-    $title = $_POST["title"];
-    $abstract = $_POST["abstract"];
-    $number = $_POST["number"];
-    $edition = explode("/", trim(preg_replace('/\s+/', '', $_POST['edition'])));
+    $authors =      explode(",", $_POST['authors']);
+    $keywords =     explode(",", trim(preg_replace('/\s+/', '', $_POST['keywords'])));
+    $title =        mysqli_escape_string($conn, $_POST["title"]);
+    $abstract =     mysqli_escape_string($conn, $_POST["abstract"]);
+    $number =       mysqli_escape_string($conn, $_POST["number"]);
+    $edition =      explode("/", trim(preg_replace('/\s+/', '', $_POST['edition'])));
+    $edition[0] =   mysqli_escape_string($conn, $edition[0]);
+    $edition[1] =   mysqli_escape_string($conn, $edition[1]);
+
 
     // If you don't insert an article you cant insert keywords
     // Inserting to Articles table
-    if($title and $abstract and $number and $conn){
+    if($title and $abstract and $number and $conn and validate_edition($edition[0], $edition[1])){
 
         $insertion_success = articles_insert($title, $abstract, $number, $conn);
 
@@ -30,4 +34,6 @@
 
             articles_authors_insert("article", "author", $authors, $existing_ids, $conn);
         }
+    }else{
+        echo "Your article creation failed.";
     }

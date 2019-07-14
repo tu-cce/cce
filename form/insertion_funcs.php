@@ -1,25 +1,9 @@
 <?php
 
     include_once 'D:\tu-cce\includes\dbh.inc.php';
+    include_once 'validations.php';
 
 
-    
-    function validate_article($title, $abstract, $number, $connection){
-        $query = "SELECT title, abstract, num FROM articles
-                  WHERE title = '$title' AND
-                        abstract = '$abstract' AND
-                        num = '$number';";
-        $query_successful = mysqli_query($connection, $query);
-
-        $row_count = mysqli_num_rows($query_successful);
-
-        if($row_count){
-            return False;
-        }
-
-        return True;
-        
-    }
     ////////////////////////////////////////////////////////////////////////////////////////////
     function articles_insert($title, $abstract, $number, $connection){
     /**
@@ -126,6 +110,8 @@
 
         // Adding all keywords' ids that are already in our table, to the $existing_ids
         foreach($keywords as $word){
+            $word = mysqli_escape_string($connection, $word);
+
             $keyword_available = "SELECT id, word FROM $second_table"."s ".
                                  "WHERE word = '$word';";
 
@@ -166,18 +152,6 @@
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////
-    function validate_author_name($author){
-
-        $author = explode(" ", trim($author));
-        if(sizeof($author) < 2){ 
-            echo "The way you entered the authors is wrong!<br>The right way is [George Peterson,Peter Jameson,...etc]<br>";
-            return null;
-        }
-
-        return $author;
-    }
-
-    ////////////////////////////////////////////////////////////////////////////////////////////
     function authors_insert($authors, $connection){
     /**
       * Inserts the elements of the $authors array into the authors table
@@ -188,6 +162,7 @@
         $existing_ids = [];
         
         foreach($authors as $author){
+            $author = mysqli_escape_string($connection, $author);
 
             $author = validate_author_name($author);
             if($author == null){ return null; }
@@ -220,6 +195,14 @@
 
     ////////////////////////////////////////////////////////////////////////////////////////////
     function articles_authors_insert($articles_table, $authors_table, $authors, $existing_ids, $connection){
+    /**
+      * Inserts the elements of the $authors array into the authors table
+      *
+      * @param string $articles_table  String representing the articles table
+      * @param string $authors_table   String representing the authors table
+      * @param array  $authors         All authors that are being inserted
+      * @param array  $existing_ids    All authors that are being inserted who are already in the db
+    */
         
         // Get the last id of articles table
         $last_article_id = get_last_id($articles_table, $connection);
@@ -250,6 +233,19 @@
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////
-    // function edition_insert($number, $year, $connection){
-
-    // }
+    function edition_insert($year, $number, $connection){
+    /**
+      * Inserts the elements of the $authors array into the authors table
+      *
+      * @param string $year
+      * @param string $number
+    */
+        
+        $last_art_id = get_last_id('article', $connection);
+        
+        $query = "INSERT INTO editions
+                         (year, number)
+                  VALUES ('$year', '$number', $last_art_id);";
+        
+        $connection -> query($query);
+    }
