@@ -3,6 +3,24 @@
     include_once 'D:\tu-cce\includes\dbh.inc.php';
 
 
+    
+    function validate_article($title, $abstract, $number, $connection){
+        $query = "SELECT title, abstract, num FROM articles
+                  WHERE title = '$title' AND
+                        abstract = '$abstract' AND
+                        num = '$number';";
+        $query_successful = mysqli_query($connection, $query);
+
+        $row_count = mysqli_num_rows($query_successful);
+
+        if($row_count){
+            return False;
+        }
+
+        return True;
+        
+    }
+    ////////////////////////////////////////////////////////////////////////////////////////////
     function articles_insert($title, $abstract, $number, $connection){
     /**
       * Inserts title, abstract and number of an article to the database
@@ -11,16 +29,21 @@
       * @param string $abstract Overview of an article
       * @param string $number   Download number for an article
     */
+        if(!validate_article($title, $abstract, $number, $connection)){
+            return False;
+        }
 
         $sql_art = "INSERT INTO articles 
                             (title, abstract, num)
                     VALUES  ('$title', '$abstract', '$number');";
 
         $connection -> query($sql_art);
+
+        return True;
     }
 
 
-
+    ////////////////////////////////////////////////////////////////////////////////////////////
     function keywords_insert($keywords, $connection){
     /**
       * Inserts keywords to the MySQL database
@@ -47,7 +70,7 @@
         }
     }
 
-
+    ////////////////////////////////////////////////////////////////////////////////////////////
     function get_last_id($table_name, $connection){
     /**
       * Gets the last id of a table, based on $table_name
@@ -66,7 +89,7 @@
         return $last_id;
     }
 
-
+    ////////////////////////////////////////////////////////////////////////////////////////////
     function many_to_many_insert($first_table, $second_table, $first_id, $second_id, $connection){
     /**
       * Inserts ids of two tables into a Many-To-Many table
@@ -85,7 +108,7 @@
         $connection -> query($query);
     }
 
-
+    ////////////////////////////////////////////////////////////////////////////////////////////
     function articles_keywords_insert($first_table, $second_table, $keywords, $connection){
     /**
       * Inserts ids of two tables into a Many-To-Many table
@@ -118,7 +141,6 @@
         // If none of those keywords exists in our table $new_kws_count is not defined
         if(!empty($existing_ids)){
             $new_kws_count = sizeof($keywords) - sizeof($existing_ids);
-            echo $new_kws_count;
         }
 
         // Getting the id of the last keyword in the keywords table
@@ -143,6 +165,7 @@
 
     }
 
+    ////////////////////////////////////////////////////////////////////////////////////////////
     function validate_author_name($author){
 
         $author = explode(" ", trim($author));
@@ -154,7 +177,7 @@
         return $author;
     }
 
-
+    ////////////////////////////////////////////////////////////////////////////////////////////
     function authors_insert($authors, $connection){
     /**
       * Inserts the elements of the $authors array into the authors table
@@ -195,7 +218,7 @@
         return $existing_ids;
     }
 
-
+    ////////////////////////////////////////////////////////////////////////////////////////////
     function articles_authors_insert($articles_table, $authors_table, $authors, $existing_ids, $connection){
         
         // Get the last id of articles table
@@ -225,3 +248,8 @@
         }
         
     }
+
+    ////////////////////////////////////////////////////////////////////////////////////////////
+    // function edition_insert($number, $year, $connection){
+
+    // }

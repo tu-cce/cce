@@ -14,7 +14,7 @@
         <input type="text" id="title" name="title" placeholder="Title"><br>
         <input type="text" id="abstract" name="abstract" placeholder="Abstract"><br>
         <input type="text" id="number" name="number" placeholder="Article number"><br>
-        <input type="text" id="edition" name="edition" placeholder="Edition[e.g. 1/2013]"><br>
+        <input type="text" id="edition" name="edition" placeholder="Edition[e.g. 2013/1]"><br>
         <button id="button" type="submit" name="submit">Make an Entry</button>
     </form>
     
