@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e139037-4f2d-4218-968a-ffa92a98c0fd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/form/form.php" beforeDir="false" afterPath="$PROJECT_DIR$/form/form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/form/form_php.php" beforeDir="false" afterPath="$PROJECT_DIR$/form/form_php.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/dbh.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/dbh.inc.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/results.php" beforeDir="false" afterPath="$PROJECT_DIR$/results.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,17 +61,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/results.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
-              <caret line="47" column="52" lean-forward="true" selection-start-line="47" selection-start-column="52" selection-end-line="47" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$APPLICATION_PLUGINS_DIR$/php/lib/php.jar!/stubs/standard/standard_1.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="979" column="9" selection-start-line="979" selection-start-column="9" selection-end-line="979" selection-end-column="9" />
+            <state relative-caret-position="306">
+              <caret line="84" column="30" selection-start-line="84" selection-start-column="30" selection-end-line="84" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -85,7 +70,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://$APPLICATION_PLUGINS_DIR$/php/lib/php.jar!/stubs/pcre/pcre.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
+            <state relative-caret-position="3978">
               <caret line="234" column="9" selection-start-line="234" selection-start-column="9" selection-end-line="234" selection-end-column="9" />
             </state>
           </provider>
@@ -98,33 +83,33 @@
               <ID>DATABASE</ID>
               <OriginalElement>942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.SCHEMA:cce_mag2</OriginalElement>
               <nodes>
-                <node x="187.75" y="0.0">942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.articles</node>
-                <node x="28.75" y="177.0">942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.article_keywords</node>
-                <node x="361.25" y="11.0">942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.authors</node>
-                <node x="0.0" y="22.0">942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.keywords</node>
-                <node x="189.75" y="166.0">942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.editions</node>
-                <node x="327.75" y="177.0">942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.article_authors</node>
+                <node x="186.25" y="0.0">942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.articles</node>
+                <node x="326.25" y="177.0">942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.article_keywords</node>
+                <node x="0.0" y="11.0">942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.authors</node>
+                <node x="368.75" y="22.0">942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.keywords</node>
+                <node x="188.25" y="166.0">942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.editions</node>
+                <node x="33.25" y="177.0">942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.article_authors</node>
               </nodes>
               <notes />
               <edges>
                 <edge source="942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.article_authors" target="942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.articles">
-                  <point x="-33.5" y="-47.0" />
-                  <point x="361.25" y="141.0" />
-                  <point x="289.41666666666663" y="141.0" />
-                  <point x="40.66666666666663" y="58.0" />
+                  <point x="33.75" y="-47.0" />
+                  <point x="134.5" y="141.0" />
+                  <point x="206.58333333333334" y="141.0" />
+                  <point x="-40.66666666666666" y="58.0" />
                 </edge>
                 <edge source="942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.article_keywords" target="942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.keywords">
-                  <point x="-35.25" y="-47.0" />
+                  <point x="35.5" y="-47.0" />
                   <point x="0.0" y="36.0" />
                 </edge>
                 <edge source="942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.article_keywords" target="942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.articles">
-                  <point x="35.25" y="-47.0" />
-                  <point x="134.5" y="141.0" />
-                  <point x="208.08333333333334" y="141.0" />
-                  <point x="-40.66666666666666" y="58.0" />
+                  <point x="-35.5" y="-47.0" />
+                  <point x="361.75" y="141.0" />
+                  <point x="287.91666666666663" y="141.0" />
+                  <point x="40.66666666666663" y="58.0" />
                 </edge>
                 <edge source="942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.article_authors" target="942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.authors">
-                  <point x="33.5" y="-47.0" />
+                  <point x="-33.75" y="-47.0" />
                   <point x="0.0" y="47.0" />
                 </edge>
                 <edge source="942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.editions" target="942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.articles">
@@ -132,7 +117,7 @@
                   <point x="0.0" y="58.0" />
                 </edge>
               </edges>
-              <settings layout="Hierarchic Group" zoom="0.9284332688588007" x="248.5" y="141.0" />
+              <settings layout="Hierarchic Group" zoom="0.9302325581395349" x="248.0" y="141.0" />
               <SelectedNodes>
                 <node>942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.article_authors</node>
               </SelectedNodes>
@@ -147,8 +132,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/form/form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+            <state relative-caret-position="289">
+              <caret line="17" column="52" lean-forward="true" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -156,15 +141,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/form/insertion_funcs.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-848" />
+            <state relative-caret-position="-457">
+              <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+            </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/dbh.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="255">
+              <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -182,8 +169,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/form/form_php.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="408">
+              <caret line="24" column="12" lean-forward="true" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="552">
+              <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -226,6 +222,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -252,8 +250,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -265,7 +261,8 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/bla" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="database.main" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -299,12 +296,21 @@
       <workItem from="1562912967375" duration="7610000" />
       <workItem from="1563075265522" duration="3498000" />
       <workItem from="1563118148450" duration="377000" />
-      <workItem from="1563124045443" duration="9420000" />
+      <workItem from="1563124045443" duration="10484000" />
+      <workItem from="1563175095063" duration="7636000" />
     </task>
+    <task id="LOCAL-00001" summary="[Add] search page">
+      <created>1563134701195</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1563134701195</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21992000" />
+    <option name="totallyTimeSpent" value="30692000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -319,7 +325,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1860817" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18910742" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
@@ -350,6 +356,10 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="[Add] search page" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Add] search page" />
+  </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand>
       <path>
@@ -360,13 +370,6 @@
     <select />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/942f3b74-cb18-444a-9ad2-3d3b0fe4c06c/console_1.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -390,39 +393,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$APPLICATION_PLUGINS_DIR$/php/lib/php.jar!/stubs/standard/standard_1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16643">
+          <caret line="979" column="9" selection-start-line="979" selection-start-column="9" selection-end-line="979" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_PLUGINS_DIR$/php/lib/php.jar!/stubs/pcre/pcre.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3978">
+          <caret line="234" column="9" selection-start-line="234" selection-start-column="9" selection-end-line="234" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="uml://DATABASE/942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.SCHEMA:cce_mag2">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
           <ID>DATABASE</ID>
           <OriginalElement>942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.SCHEMA:cce_mag2</OriginalElement>
           <nodes>
-            <node x="187.75" y="0.0">942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.articles</node>
-            <node x="28.75" y="177.0">942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.article_keywords</node>
-            <node x="361.25" y="11.0">942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.authors</node>
-            <node x="0.0" y="22.0">942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.keywords</node>
-            <node x="189.75" y="166.0">942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.editions</node>
-            <node x="327.75" y="177.0">942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.article_authors</node>
+            <node x="186.25" y="0.0">942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.articles</node>
+            <node x="326.25" y="177.0">942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.article_keywords</node>
+            <node x="0.0" y="11.0">942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.authors</node>
+            <node x="368.75" y="22.0">942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.keywords</node>
+            <node x="188.25" y="166.0">942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.editions</node>
+            <node x="33.25" y="177.0">942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.article_authors</node>
           </nodes>
           <notes />
           <edges>
             <edge source="942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.article_authors" target="942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.articles">
-              <point x="-33.5" y="-47.0" />
-              <point x="361.25" y="141.0" />
-              <point x="289.41666666666663" y="141.0" />
-              <point x="40.66666666666663" y="58.0" />
+              <point x="33.75" y="-47.0" />
+              <point x="134.5" y="141.0" />
+              <point x="206.58333333333334" y="141.0" />
+              <point x="-40.66666666666666" y="58.0" />
             </edge>
             <edge source="942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.article_keywords" target="942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.keywords">
-              <point x="-35.25" y="-47.0" />
+              <point x="35.5" y="-47.0" />
               <point x="0.0" y="36.0" />
             </edge>
             <edge source="942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.article_keywords" target="942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.articles">
-              <point x="35.25" y="-47.0" />
-              <point x="134.5" y="141.0" />
-              <point x="208.08333333333334" y="141.0" />
-              <point x="-40.66666666666666" y="58.0" />
+              <point x="-35.5" y="-47.0" />
+              <point x="361.75" y="141.0" />
+              <point x="287.91666666666663" y="141.0" />
+              <point x="40.66666666666663" y="58.0" />
             </edge>
             <edge source="942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.article_authors" target="942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.authors">
-              <point x="33.5" y="-47.0" />
+              <point x="-33.75" y="-47.0" />
               <point x="0.0" y="47.0" />
             </edge>
             <edge source="942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.editions" target="942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.articles">
@@ -430,7 +447,7 @@
               <point x="0.0" y="58.0" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="0.9284332688588007" x="248.5" y="141.0" />
+          <settings layout="Hierarchic Group" zoom="0.9302325581395349" x="248.0" y="141.0" />
           <SelectedNodes>
             <node>942f3b74-cb18-444a-9ad2-3d3b0fe4c06c.TABLE:cce_mag2.article_authors</node>
           </SelectedNodes>
@@ -441,56 +458,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_PLUGINS_DIR$/php/lib/php.jar!/stubs/pcre/pcre.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="234" column="9" selection-start-line="234" selection-start-column="9" selection-end-line="234" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_PLUGINS_DIR$/php/lib/php.jar!/stubs/standard/standard_1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="979" column="9" selection-start-line="979" selection-start-column="9" selection-end-line="979" selection-end-column="9" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/.idea/dataSources.xml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/dataSources.local.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/dataSources.xml">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/form/insertion_funcs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-457">
+          <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/form/form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+        <state relative-caret-position="289">
+          <caret line="17" column="52" lean-forward="true" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/form/form_php.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="408">
+          <caret line="24" column="12" lean-forward="true" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/form/insertion_funcs.php">
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-848" />
+        <state relative-caret-position="552">
+          <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/results.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" column="52" lean-forward="true" selection-start-line="47" selection-start-column="52" selection-end-line="47" selection-end-column="52" />
+        <state relative-caret-position="306">
+          <caret line="84" column="30" selection-start-line="84" selection-start-column="30" selection-end-line="84" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/dbh.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="255">
+          <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
         </state>
       </provider>
     </entry>
