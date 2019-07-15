@@ -27,14 +27,14 @@ $SQL_QUERY =    "SELECT distinct art.title, art.abstract ,
                     JOIN editions e on art.id = e.article_id" . "\n WHERE ";
 
 
-function get_where_queries($inputs, $first, $last, $keywords, $title, $edition){
+function get_where_queries($inputs, $first, $last, $keyword, $title, $edition){
     /**
       * Returns an associative array with all parts of the WHERE statement that is used to search.
       *
       * @param array    $inputs
       * @param string   $first
       * @param string   $last
-      * @param array    $keywords
+      * @param string    $keywords
       * @param string   $title
       * @param array    $edition
     */
@@ -52,9 +52,8 @@ function get_where_queries($inputs, $first, $last, $keywords, $title, $edition){
                 }
                 break;
             case "keywords":
-                if($keywords[0] != ''){
-                    $kws = join(",", $keywords);
-                    $inputs[$key] = "LOWER(k.word) like '$kws'";
+                if($keyword != ''){
+                    $inputs[$key] = "LOWER(k.word) = '$keyword'";
                 }
                 break;
             case "title":
@@ -69,7 +68,7 @@ function get_where_queries($inputs, $first, $last, $keywords, $title, $edition){
                 }
                 break;
             case "number":
-                if(isset($edidtion[1])){
+                if(isset($edition[1])){
                     if($edition[1] != ''){
                         $inputs[$key] = " e.number = '$edition[1]' ";
                     }
