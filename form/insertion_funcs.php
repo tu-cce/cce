@@ -95,7 +95,7 @@
     ////////////////////////////////////////////////////////////////////////////////////////////
     function articles_keywords_insert($first_table, $second_table, $keywords, $connection){
     /**
-      * Inserts ids of two tables into a Many-To-Many table
+      * Links an article with its keywords
       *
       * @param string $first_table  The name of the first table
       * @param string $second_table The name of the second table
@@ -196,7 +196,7 @@
     ////////////////////////////////////////////////////////////////////////////////////////////
     function articles_authors_insert($articles_table, $authors_table, $authors, $existing_ids, $connection){
     /**
-      * Inserts the elements of the $authors array into the authors table
+      * Links an article with its authors
       *
       * @param string $articles_table  String representing the articles table
       * @param string $authors_table   String representing the authors table
@@ -235,7 +235,7 @@
     ////////////////////////////////////////////////////////////////////////////////////////////
     function edition_insert($year, $number, $connection){
     /**
-      * Inserts the elements of the $authors array into the authors table
+      * Inserts the edition of an article
       *
       * @param string $year
       * @param string $number
