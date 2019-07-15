@@ -11,11 +11,12 @@
     $keywords = explode(",", trim(preg_replace('/\s+/', '', $_POST['keywords']))); // Splitting the keywords
     $title = strtolower(trim($_POST['title']));
     $edition = explode("/", trim(preg_replace('/\s+/', '', $_POST['edition'])));
-    
 
-    $sql_names =    "SELECT authors.f_name, authors.l_name, articles.title, articles.abstract FROM article_authors
+
+$sql_names = "SELECT authors.f_name, authors.l_name, articles.title, articles.abstract, articles.num, editions.year, editions.number FROM article_authors
                      JOIN articles ON articles.id = article_authors.article_id
                      JOIN authors ON authors.id = article_authors.author_id
+                     LEFT JOIN editions ON articles.id = editions.article_id
                      WHERE LOWER(authors.f_name) = '$first' OR LOWER(authors.l_name) = '$last';";
     
     // Sending the Query to the DB
@@ -27,7 +28,14 @@
     if($result_check > 0){
         while($row = mysqli_fetch_assoc($results)){
             // Here $row becomes an associative array
-            echo '<strong>Author</strong>: ' . $row['f_name'] . " " . $row['l_name'] . "<br>" . '<strong>Title</strong>: ' . $row['title'] . "<br>" . '<strong>Abstract</strong>: ' . $row['abstract'] ."<br><br>";
+            echo '<strong>Author</strong>: ' . $row['f_name'] . " " . $row['l_name'] . "<br>"
+                . '<strong>Title</strong>: ' . $row['title'] . "<br>"
+                . '<strong>Abstract</strong>: ' . $row['abstract'] . "<br>"
+                . '<a href="includes/downloads.inc.php?article_number=' . urlencode($row['num'])
+                . "&edition_year=" . urlencode($row['year'])
+                . "&edition_number=" . urlencode($row['number'])
+                . '">View complete article</a> (#' . $row['num'] . " from " . $row['year'] . "/" . $row['number'] . ")<br><br>";
+
         }
     }
     else{ echo 'No articles were found.'; }
