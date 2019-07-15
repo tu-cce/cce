@@ -69,7 +69,7 @@ function get_where_queries($inputs, $first, $last, $keywords, $title, $edition){
                 }
                 break;
             case "number":
-                if(isset($edidtion[1])){
+                if(isset($edition[1])){
                     if($edition[1] != ''){
                         $inputs[$key] = " e.number = '$edition[1]' ";
                     }
