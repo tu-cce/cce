@@ -6,14 +6,14 @@
     // include_once 'includes/queries.inc.php';
 
     // Taking the variables from the Form
-    $first = strtolower(preg_replace('/\s+/', '', $_POST['first']));
-    $last = strtolower(preg_replace('/\s+/', '', $_POST['last']));
+    $first = mysqli_escape_string($conn, strtolower(preg_replace('/\s+/', '', $_POST['first'])));
+    $last = mysqli_escape_string($conn, strtolower(preg_replace('/\s+/', '', $_POST['last'])));
     $keywords = explode(",", trim(preg_replace('/\s+/', '', $_POST['keywords']))); // Splitting the keywords
-    $title = strtolower(trim($_POST['title']));
+    $title = mysqli_escape_string($conn, strtolower(trim($_POST['title'])));
     $edition = explode("/", trim(preg_replace('/\s+/', '', $_POST['edition'])));
 
 
-$sql_names = "SELECT authors.f_name, authors.l_name, articles.title, articles.abstract, articles.num, editions.year, editions.number FROM article_authors
+    $sql_names = "SELECT authors.f_name, authors.l_name, articles.title, articles.abstract, articles.num, editions.year, editions.number FROM article_authors
                      JOIN articles ON articles.id = article_authors.article_id
                      JOIN authors ON authors.id = article_authors.author_id
                      LEFT JOIN editions ON articles.id = editions.article_id
