@@ -17,7 +17,7 @@
             return False;
         }
 
-        $sql_art = "INSERT INTO articles 
+        $sql_art = "INSERT INTO cce_mag.articles 
                             (title, abstract, num)
                     VALUES  ('$title', '$abstract', '$number');";
 
@@ -244,8 +244,8 @@
         $last_art_id = get_last_id('article', $connection);
         
         $query = "INSERT INTO editions
-                         (year, number)
-                  VALUES ('$year', '$number', $last_art_id);";
+                         (year, number, article_id)
+                  VALUES ('$year', '$number', '$last_art_id');";
         
         $connection -> query($query);
     }
