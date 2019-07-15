@@ -33,6 +33,7 @@
             $existing_ids = authors_insert($authors, $conn);
 
             articles_authors_insert("article", "author", $authors, $existing_ids, $conn);
+            edition_insert($edition[0], $edition[1], $conn);
         }
     }else{
         echo "Your article creation failed.";
