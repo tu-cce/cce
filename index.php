@@ -31,7 +31,7 @@
         <input type="text" id="last" name="last" placeholder="Last name">
         <input type="text" id="keywords" name="keywords" placeholder="Keywords">
         <input type="text" id="title" name="title" placeholder="Title">
-        <input type="text" id="edition" name="edition" placeholder="Edition[e.g. 1/2013]">
+        <input type="text" id="edition" name="edition" placeholder="Edition[e.g. 2013/1]">
         <button id="button" type="submit" name="submit">Search</button>
     </form>
 

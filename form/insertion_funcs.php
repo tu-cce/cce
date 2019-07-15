@@ -196,7 +196,7 @@
     ////////////////////////////////////////////////////////////////////////////////////////////
     function articles_authors_insert($articles_table, $authors_table, $authors, $existing_ids, $connection){
     /**
-      * Inserts the elements of the $authors array into the authors table
+      * Links an article with its authors
       *
       * @param string $articles_table  String representing the articles table
       * @param string $authors_table   String representing the authors table
@@ -235,7 +235,7 @@
     ////////////////////////////////////////////////////////////////////////////////////////////
     function edition_insert($year, $number, $connection){
     /**
-      * Inserts the elements of the $authors array into the authors table
+      * Inserts the edition of an article
       *
       * @param string $year
       * @param string $number
@@ -244,8 +244,10 @@
         $last_art_id = get_last_id('article', $connection);
         
         $query = "INSERT INTO editions
-                         (year, number)
-                  VALUES ('$year', '$number', $last_art_id);";
+                         (year, number, article_id)
+                  VALUES ('$year', '$number', '$last_art_id');";
+
+        echo $query;
         
         $connection -> query($query);
     }
