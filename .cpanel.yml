@@ -1,0 +1,10 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/cceneu/test.cceng.eu/
+    - /bin/cp -R .idea $DEPLOYPATH
+    - /bin/cp -R form $DEPLOYPATH
+    - /bin/cp -R includes $DEPLOYPATH
+    - /bin/cp -R static $DEPLOYPATH
+    - /bin/cp index.php $DEPLOYPATH
+    - /bin/cp results.php $DEPLOYPATH
