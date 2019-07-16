@@ -1,4 +1,4 @@
----
+    ---
 deployment:
   tasks:
     - export DEPLOYPATH=/home/ccengeu/test.cceng.eu/
@@ -8,5 +8,5 @@ deployment:
     - /bin/cp -R static $DEPLOYPATH
     - /bin/cp index.php $DEPLOYPATH
     - /bin/cp results.php $DEPLOYPATH
-    - /bin/cp downloads.inc.php $INCLUDES_DEPLOYPATH
-    - /bin/cp queries.inc.php $INCLUDES_DEPLOYPATH
+    - /bin/cp includes/downloads.inc.php $INCLUDES_DEPLOYPATH
+    - /bin/cp includes/queries.inc.php $INCLUDES_DEPLOYPATH
