@@ -91,7 +91,7 @@
                         "(".$first_table . "_id". ", " . $second_table . "_id ".")".
                         "VALUES ('$first_id', '$second_id');";
 
-        echo $query . "<br>";
+        echo $query . "<br><br>";
         $connection -> query($query);
     }
 
@@ -250,7 +250,7 @@
                          (year, number, article_id)
                   VALUES ('$year', '$number', '$last_art_id');";
 
-        echo $query;
+        echo $query . "<br>";
         
         $connection -> query($query);
     }

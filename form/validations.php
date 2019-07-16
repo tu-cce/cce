@@ -8,7 +8,7 @@
                     abstract = '$abstract' AND
                     num = '$number';";
 
-        echo $query . "<br>";
+        echo $query . "<br><br>";
         $query_successful = mysqli_query($connection, $query);
 
         $row_count = mysqli_num_rows($query_successful);

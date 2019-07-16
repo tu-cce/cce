@@ -18,22 +18,24 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     
-    <!-- Local JS -->
-    <script src="static/master.js"></script>
+    <!-- Local css -->
+    <link rel="stylesheet" type="text/css" src="static/master.css">
 
 </head>
 <body>
 
-    <h1>Search for a CCE article</h1>
+    <div align='center'>
+        <h1>Search for a CCE article</h1>
 
-    <form method="POST">
-        <input type="text" id="first" name="first" placeholder="First name">
-        <input type="text" id="last" name="last" placeholder="Last name">
-        <input type="text" id="keywords" name="keywords" placeholder="Keywords">
-        <input type="text" id="title" name="title" placeholder="Title">
-        <input type="text" id="edition" name="edition" placeholder="Edition[e.g. 1/2013]">
-        <button id="button" type="submit" name="submit">Search</button>
-    </form>
+        <form method="POST">
+            <input type="text" id="first" name="first" placeholder="First name">
+            <input type="text" id="last" name="last" placeholder="Last name">
+            <input type="text" id="keywords" name="keywords" placeholder="Keywords">
+            <input type="text" id="title" name="title" placeholder="Title">
+            <input type="text" id="edition" name="edition" placeholder="Edition[e.g. 1/2013]">
+            <button id="button" type="submit" name="submit">Search</button>
+        </form>
+    </div>
 
     <br>
 
