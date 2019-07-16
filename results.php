@@ -59,8 +59,8 @@
                                             "<strong>Keywords</strong>: " .    $row['keywords'] ."<br>" .
                                             "<strong>Edition</strong>: " .     $row['EditionYear'] . "/" . $row['EditionNumber'] . "<br>" .
                                             '<a href="includes/downloads.inc.php?article_number=' . urlencode($row['num'])
-                                                . "&edition_year=" . urlencode($row['year'])
-                                                . "&edition_number=" . urlencode($row['number'])
+                                                . "&edition_year=" . urlencode($row['EditionYear'])
+                                                . "&edition_number=" . urlencode($row['EditionNumber'])
                                                 . '">View complete article</a> (#' . $row['num'] . " from " . $row['EditionYear'] . "/" . $row['EditionNumber'] . ")<br>";
                     }
                     // Free the result
