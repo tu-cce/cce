@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <form action="form_php.php" method="POST">
+    <form method="POST">
         <input type="text" id="authors" name="authors" placeholder="Authors"><br>
         <input type="text" id="keywords" name="keywords" placeholder="Keywords"><br>
         <input type="text" id="title" name="title" placeholder="Title"><br>
@@ -18,5 +18,14 @@
         <button id="button" type="submit" name="submit">Make an Entry</button>
     </form>
     
+    <div id="form_results">
+        <br><br><br>
+        <!-- Results will be displayed here, when a search is made. -->
+        <?php
+            if(isset($_POST['submit'])){ include("form_php.php"); } 
+        ?>
+        
+    </div>
+
 </body>
 </html>

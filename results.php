@@ -64,7 +64,7 @@
                 }
             
             // While there is a next result
-            }while(mysqli_next_result($conn));
+            }while(mysqli_more_results($conn) and mysqli_next_result($conn));
 
             // Make all queries unique
             $unique_queries = array_unique($unique_queries);
