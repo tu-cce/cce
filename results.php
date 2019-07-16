@@ -61,7 +61,7 @@
                                             '<a href="includes/downloads.inc.php?article_number=' . urlencode($row['num'])
                                                 . "&edition_year=" . urlencode($row['EditionYear'])
                                                 . "&edition_number=" . urlencode($row['EditionNumber'])
-                                                . '">View complete article</a> (#' . $row['num'] . " from " . $row['EditionYear'] . "/" . $row['EditionNumber'] . ")<br>";
+                                                . '">View complete article</a><br>';
                     }
                     // Free the result
                     mysqli_free_result($result);
