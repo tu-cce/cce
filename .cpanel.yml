@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/cceneu/test.cceng.eu/
+    - export DEPLOYPATH=/home/ccengeu/test.cceng.eu/
     - /bin/cp -R .idea $DEPLOYPATH
     - /bin/cp -R form $DEPLOYPATH
     - /bin/cp -R includes $DEPLOYPATH
