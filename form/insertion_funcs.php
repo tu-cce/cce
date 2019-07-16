@@ -1,6 +1,6 @@
 <?php
 
-    include_once '../includes/dbh.inc.php';
+    include_once $_SERVER["DOCUMENT_ROOT"] . '/includes/dbh.inc.php';
     include_once 'validations.php';
 
 
@@ -36,6 +36,9 @@
     */    
 
         foreach($keywords as $word ){
+
+            $word = mysqli_escape_string($connection, $word);
+
             $word_search = "SELECT word FROM keywords
                              WHERE word = '$word';";
     
@@ -95,7 +98,7 @@
     ////////////////////////////////////////////////////////////////////////////////////////////
     function articles_keywords_insert($first_table, $second_table, $keywords, $connection){
     /**
-      * Links an article with its keywords
+      * Inserts ids of two tables into a Many-To-Many table
       *
       * @param string $first_table  The name of the first table
       * @param string $second_table The name of the second table
@@ -246,6 +249,8 @@
         $query = "INSERT INTO editions
                          (year, number, article_id)
                   VALUES ('$year', '$number', '$last_art_id');";
+
+        echo $query;
         
         $connection -> query($query);
     }

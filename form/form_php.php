@@ -1,7 +1,8 @@
 <?php
-    include_once 'D:\tu-cce\includes\dbh.inc.php';
+    include_once $_SERVER["DOCUMENT_ROOT"] . '/includes/dbh.inc.php';
     include_once 'insertion_funcs.php';
     include_once 'validations.php';
+
 
 
     // Taking the variables from the Form in index.php
@@ -11,13 +12,19 @@
     $abstract =     mysqli_escape_string($conn, $_POST["abstract"]);
     $number =       mysqli_escape_string($conn, $_POST["number"]);
     $edition =      explode("/", trim(preg_replace('/\s+/', '', $_POST['edition'])));
-    $edition[0] =   mysqli_escape_string($conn, $edition[0]);
-    $edition[1] =   mysqli_escape_string($conn, $edition[1]);
+
+    if(sizeof($edition) == 2){
+        $edition[0] =   mysqli_escape_string($conn, $edition[0]);
+        $edition[1] =   mysqli_escape_string($conn, $edition[1]);
+    }
 
 
     // If you don't insert an article you cant insert keywords
     // Inserting to Articles table
-    if($title and $abstract and $number and $conn and validate_edition($edition[0], $edition[1])){
+    if($title and $abstract and $number and $conn and 
+       validate_edition($edition[0], $edition[1]) and
+       validate_authors_input($authors) and
+       validate_title_input($title)){
 
         $insertion_success = articles_insert($title, $abstract, $number, $conn);
 
@@ -33,6 +40,7 @@
             $existing_ids = authors_insert($authors, $conn);
 
             articles_authors_insert("article", "author", $authors, $existing_ids, $conn);
+
             edition_insert($edition[0], $edition[1], $conn);
         }
     }else{
