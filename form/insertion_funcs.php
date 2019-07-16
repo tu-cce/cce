@@ -1,6 +1,6 @@
 <?php
 
-    include_once 'D:\tu-cce\includes\dbh.inc.php';
+    include_once $_SERVER["DOCUMENT_ROOT"] . '/includes/dbh.inc.php';
     include_once 'validations.php';
 
 
