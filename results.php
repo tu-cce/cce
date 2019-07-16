@@ -57,7 +57,11 @@
                                             "<strong>Title</strong>: " .       $row['title'] . "<br>" . 
                                             "<strong>Abstract</strong>: " .    $row['abstract'] . "<br>" .
                                             "<strong>Keywords</strong>: " .    $row['keywords'] ."<br>" .
-                                            "<strong>Edition</strong>: " .     $row['EditionYear'] . "/" . $row['EditionNumber'] . "<br>";
+                                            "<strong>Edition</strong>: " .     $row['EditionYear'] . "/" . $row['EditionNumber'] . "<br>" .
+                                            '<a href="includes/downloads.inc.php?article_number=' . urlencode($row['num'])
+                                                . "&edition_year=" . urlencode($row['year'])
+                                                . "&edition_number=" . urlencode($row['number'])
+                                                . '">View complete article</a> (#' . $row['num'] . " from " . $row['year'] . "/" . $row['number'] . ")<br>";
                     }
                     // Free the result
                     mysqli_free_result($result);
