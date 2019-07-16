@@ -36,6 +36,9 @@
     */    
 
         foreach($keywords as $word ){
+
+            $word = mysqli_escape_string($connection, $word);
+
             $word_search = "SELECT word FROM keywords
                              WHERE word = '$word';";
     

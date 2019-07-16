@@ -15,8 +15,8 @@ $SQL_QUERY =    "SELECT distinct art.title, art.abstract ,
                     JOIN article_authors ON authors.id = article_authors.author_id
                     WHERE article_authors.article_id = art_aut.article_id
                     GROUP BY article_authors.article_id
-                    ) AS authors, 
-                                
+                    ) AS authors,
+
                     e.year AS 'EditionYear',
                     e.number AS 'EditionNumber'
                     FROM article_authors art_aut
@@ -53,7 +53,7 @@ function get_where_queries($inputs, $first, $last, $keyword, $title, $edition){
                 break;
             case "keywords":
                 if($keyword != ''){
-                    $inputs[$key] = "LOWER(k.word) = '$keyword'";
+                    $inputs[$key] = "LOWER(k.word) = '$keyword' OR LOWER(art.abstract) LIKE '$keyword'";
                 }
                 break;
             case "title":

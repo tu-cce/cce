@@ -4,7 +4,6 @@
     include_once 'includes/dbh.inc.php';
     // Including the SQL Queries
     include_once 'includes/queries.inc.php';
-
     
 
     $inputs_entered['first'] = "";
@@ -15,6 +14,7 @@
     $inputs_entered['number'] = "";
 
     $search_query = "";
+    
     // When we have atleast one successful query $row_found = True
     $row_found = False;
 
