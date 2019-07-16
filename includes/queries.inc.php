@@ -2,7 +2,7 @@
 
 <?php
 
-$SQL_QUERY =    "SELECT distinct art.title, art.abstract, art.num 
+$SQL_QUERY =    "SELECT distinct art.title, art.abstract, art.num,
                     (SELECT group_concat(keywords.word) 
                     FROM keywords 
                     JOIN article_keywords ON keywords.id = article_keywords.keyword_id
