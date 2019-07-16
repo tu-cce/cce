@@ -1,6 +1,6 @@
 <?php
 
-    include_once 'D:\tu-cce\includes\dbh.inc.php';
+    include_once '../includes/dbh.inc.php';
     include_once 'validations.php';
 
 
@@ -17,7 +17,7 @@
             return False;
         }
 
-        $sql_art = "INSERT INTO cce_mag.articles 
+        $sql_art = "INSERT INTO articles 
                             (title, abstract, num)
                     VALUES  ('$title', '$abstract', '$number');";
 
