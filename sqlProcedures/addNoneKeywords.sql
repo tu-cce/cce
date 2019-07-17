@@ -1,7 +1,8 @@
 drop procedure if exists addNoneKeywords;
 delimiter |
-create procedure addNoneKeywords(IN noneKeywordID int)
+create procedure addNoneKeywords()
 BEGIN
+    declare noneKeywordID int;
     declare finished int;
     declare tempArticleID int;
     DECLARE myCursor CURSOR FOR(
@@ -12,6 +13,8 @@ BEGIN
     );
     declare continue handler FOR NOT FOUND set finished = 1;
     set finished = 0;
+
+    SELECT id into noneKeywordID FROM keywords where word = 'none';
 
     Open myCursor;
     article_loop: while (finished = 0)
@@ -29,4 +32,4 @@ end;
 |
 delimiter |
 
-call addNoneKeywords(8);
+call addNoneKeywords();
