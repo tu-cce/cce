@@ -53,12 +53,12 @@ function get_where_queries($inputs, $first, $last, $keyword, $title, $edition){
                 break;
             case "keywords":
                 if($keyword != ''){
-                    $inputs[$key] = "LOWER(k.word) = '$keyword' OR LOWER(art.abstract) LIKE '$keyword'";
+                    $inputs[$key] = "LOWER(k.word) = '%$keyword%' OR LOWER(art.abstract) LIKE '%$keyword%'";
                 }
                 break;
             case "title":
                 if($title != ''){
-                    $inputs[$key] = "LOWER(art.title) like ('$title')";
+                    $inputs[$key] = "LOWER(art.title) LIKE ('%$title%')";
                 }
                 break;
                 
