@@ -38,17 +38,18 @@
             $inputs_entered = array_filter($inputs_entered);
             
             $search_query .= " " . $SQL_QUERY . join(" AND \n" ,$inputs_entered) . "; ";
+
         }
 
         // echo $search_query;
 
         if(mysqli_multi_query($conn, $search_query)){
             $unique_queries = [];
-            
+
             do{
                 // Store the first result
                 if($result = mysqli_store_result($conn)){
-                    // Fetch one and one row
+
 
                     while($row = mysqli_fetch_assoc($result)){
                         $row_found = True;

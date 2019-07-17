@@ -27,6 +27,49 @@ $SQL_QUERY =    "SELECT distinct art.title, art.abstract, art.num,
                     JOIN editions e on art.id = e.article_id" . "\n WHERE ";
 
 
+$SQL_QUERY_NO_ABS =    "SELECT distinct art.title, art.num,
+                        (SELECT group_concat(keywords.word) 
+                        FROM keywords 
+                        JOIN article_keywords ON keywords.id = article_keywords.keyword_id
+                        WHERE article_keywords.article_id = art_aut.article_id 
+                        GROUP BY article_keywords.article_id
+                        ) AS keywords, 
+                                    
+                        (SELECT group_concat(authors.f_name,' ',authors.l_name)
+                        FROM authors 
+                        JOIN article_authors ON authors.id = article_authors.author_id
+                        WHERE article_authors.article_id = art_aut.article_id
+                        GROUP BY article_authors.article_id
+                        ) AS authors,
+
+                        e.year AS 'EditionYear',
+                        e.number AS 'EditionNumber'
+                        FROM article_authors art_aut
+                        JOIN articles art ON art.id = art_aut.article_id
+                        JOIN authors aut  ON aut.id = art_aut.author_id
+                        JOIN article_keywords art_key ON art.id = art_key.article_id
+                        JOIN keywords k on art_key.keyword_id = k.id
+                        JOIN editions e on art.id = e.article_id" . "\n WHERE ";
+
+
+$SQL_QUERY_NO_KWS =    "SELECT distinct art.title, art.abstract, art.num,
+                        (SELECT group_concat(authors.f_name,' ',authors.l_name)
+                        FROM authors 
+                        JOIN article_authors ON authors.id = article_authors.author_id
+                        WHERE article_authors.article_id = art_aut.article_id
+                        GROUP BY article_authors.article_id
+                        ) AS authors,
+
+                        e.year AS 'EditionYear',
+                        e.number AS 'EditionNumber'
+                        FROM article_authors art_aut
+                        JOIN articles art ON art.id = art_aut.article_id
+                        JOIN authors aut  ON aut.id = art_aut.author_id
+                        JOIN article_keywords art_key ON art.id = art_key.article_id
+                        JOIN keywords k on art_key.keyword_id = k.id
+                        JOIN editions e on art.id = e.article_id" . "\n WHERE ";
+
+
 function get_where_queries($inputs, $first, $last, $keyword, $title, $edition){
     /**
       * Returns an associative array with all parts of the WHERE statement that is used to search.
